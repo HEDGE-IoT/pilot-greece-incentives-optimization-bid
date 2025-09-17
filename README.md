@@ -212,9 +212,3 @@
 - **Audit Logging:** immutable logs of optimization events.  
 - **Anomaly Detection:** alerts for abnormal bids or unauthorized access.  
 
----
-
-## 1.9 Pre-Demo Phase WP5
-- Initial experimentation with demo data for 10 residential prosumers.  
-- Verified optimization algorithm with 1-hour MTUs.  
-- Results show concentrated reductions around midday and evening price peaks (see heatmap).  
