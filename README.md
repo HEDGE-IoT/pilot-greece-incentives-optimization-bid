@@ -1,13 +1,13 @@
 # Incentives Optimization and Bid Formulation
 
-## 1.1 General Information and Purpose
+## General Information and Purpose
 - **Service Name/Title:** `incentives_optimization_and_bid_formulation`
 - **Description and purpose:** Calculating optimal incentives to encourage consumer participation in flexibility actions and formulates an optimal bid (quantity, price) for the Local Flexibility Market.
 - **Owner/Contact Information:** ICCS
 
 ---
 
-## 1.2 Functional Requirements
+## Functional Requirements
 1. The system should determine the optimal incentives for consumer participation.
 2. The system should be able to provide specific incentives in euros for all the different house groups.
 3. The system should be able to provide such incentives that it makes sense for the customers to participate.
@@ -18,7 +18,7 @@
 
 ---
 
-## 1.3 Non-Functional Requirements
+## Non-Functional Requirements
 - The calculated incentives should be available in a few seconds.
 - Access to the incentive calculation should be limited to registered users.
 - Periodic backups with automated recovery in case of failure.
@@ -26,9 +26,9 @@
 
 ---
 
-## 1.4 Service Interfaces
+## Service Interfaces
 
-### 1.4.1 API Endpoints
+### API Endpoints
 
 #### Endpoint 1 — Calculate Incentives to Houses and the Bid to the LFM
 - **URL:** `/incentives/optimize-bid`
@@ -144,7 +144,7 @@
 
 ---
 
-## 1.5 Data Model
+## Data Model
 
 ### Input Example
 ```json
@@ -187,7 +187,7 @@
 
 ---
 
-## 1.6 Entities and Relationships
+## Entities and Relationships
 - **Houses**: Store basic info (name, address, area, year, floor, energy_class, heating_type, cooling_type, invoice_provider).  
 - **Forecasted_data**: Predictions for consumption, production, battery, and response probability.  
 - **Portfolio**: Collection of forecasted energy data, market price, associated Incentives.  
@@ -197,7 +197,7 @@
 
 ---
 
-## 1.7 Integration and Dependencies
+## Integration and Dependencies
 - **Internal Data Sources:** historical bid data, real-time forecasts.  
 - **Edge and Cloud Integration:** residential UIs, aggregators, smart meters, forecasting modules, cloud storage.  
 - **Trading Service:** generates optimal bid for aggregator submission.  
@@ -205,7 +205,7 @@
 
 ---
 
-## 1.8 Security and Privacy
+## Security and Privacy
 - **Data Sensitivity:** includes market data, incentives, forecasts, personally identifying consumption profiles.  
 - **Encryption:** TLS 1.2+ in transit, AES-256 at rest, encrypted backups.  
 - **RBAC:** Operator (optimize only), Administrator (full access).  
